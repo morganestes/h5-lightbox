@@ -1,16 +1,47 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Data-Lightbox Demo</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>h5-lightbox Demo</title>
+    <style>
+        #lightbox {
+            position: fixed; /* keeps the lightbox window in the current viewport */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, .7);
+            text-align: center;
+        }
+
+        #lightbox p {
+            text-align: right;
+            color: #fff;
+            margin-right: 20px;
+            font-size: 12px;
+        }
+
+        #lightbox img {
+            box-shadow: 0 0 25px #111;
+            -webkit-box-shadow: 0 0 25px #111;
+            -moz-box-shadow: 0 0 25px #111;
+            max-width: 940px;
+        }
+    </style>
 </head>
 
 <body>
-<p>with</p>
-<img src="http://placekitten.com/200/300" alt="aww, a kitten!" width="200" height="300" data-large-src="http://placekitten.com/400/600">
-<p>without</p>
-<img src="http://placekitten.com/g/200/300" alt="" width="200" height="300">
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+<figure>
+    <img src="http://placekitten.com/200/300" alt="aww, a kitten!" width="200" height="300"
+         data-large-src="http://placekitten.com/400/600">
+    <figcaption><p>Image with <code>data-large-src</code></p></figcaption>
+</figure>
+
+<figure>
+    <img src="http://placekitten.com/g/200/300" alt="" width="200" height="300">
+    <figcaption><p>Image without <code>data</code> attribute.</p></figcaption>
+</figure>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
 <script src="jquery.lightbox.js"></script>
 </body>
 </html>

@@ -13,43 +13,72 @@
  * when clicked.
  *
  * Author: Morgan Estes (@morganestes) http://github.com/morganestes
+ * Lightbox code: http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/super-simple-lightbox-with-css-and-jquery/
  *
- * TODO Implement the modal lightbox code
  */
-  (function($) {
-  $.fn.datalightbox = function(options) {
+(function ($) {
+    $.fn.datalightbox = function (options) {
 
-      if (!this.length) {
-          return this;
-      }
+        if (!this.length) {
+            return this;
+        }
 
-      var opt = $.extend($.fn.datalightbox.defaults, options);
+        var opt = $.extend($.fn.datalightbox.defaults, options);
 
-      return this.each(function () {
+        return this.each(function () {
 
-          var $this = $(this),
-              img_large = $this.attr(opt.target),
-              is_lb = function(img_large) {
-                  return (typeof img_large !== "undefined");
-          };
+            var $this = $(this),
+                img_large = $this.attr(opt.target),
+                /**
+                 * check if the image has the proper data attribute
+                 * @param {String} img_large Attribute set in options.
+                 * @returns {Boolean}
+                 */
+                is_lb = function (img_large) {
+                    return (typeof img_large !== "undefined");
+                };
 
-          if (is_lb(img_large)) {
-              $this.wrap('<a class="' + opt.wrapper_class + '" href="' + img_large + '"></a>');
-          }
+            if (is_lb(img_large)) {
+                $this.wrap('<a class="' + opt.wrapper_class + '" href="' + img_large + '"></a>');
+            }
 
-      });
-  };
+            // lightbox implementation
+            $('a.' + opt.wrapper_class).click(function (e) {
+                e.preventDefault();
+                var lb_image_href = $(this).attr('href');
 
-  // default options
-  $.fn.datalightbox.defaults = {
-    target: 'data-large-src',
-    wrapper_class: 'lightbox'
-  };
+                if ($('#lightbox').length) {
+                    $('#lb_img').html('<img src="' + lb_image_href + '" />');
+                    $('#lightbox').show();
+                }
+                else {
+                    var lightbox =
+                        '<div id="lightbox">' +
+                            '<p>Click to close</p>' +
+                            '<div id="lb_img">' +
+                                '<img src="' + lb_image_href + '" />' +
+                            '</div>' +
+                        '</div>';
+
+                    $('body').append(lightbox);
+                }
+            });
+            $('#lightbox').live('click', function () {
+                $('#lightbox').hide();
+            });
+        });
+    };
+
+    // default options
+    $.fn.datalightbox.defaults = {
+        target:'data-large-src',
+        wrapper_class:'lightbox'
+    };
 
 })(jQuery);
 
 // remove the lines below if you want to call the function yourself
 // otherwise, it will automatically run on page load
-jQuery(function($) {
-  $('img').datalightbox();
+jQuery(function ($) {
+    $('img').datalightbox();
 });

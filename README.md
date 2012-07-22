@@ -28,5 +28,3 @@ The plugin will go through each `img` element on the page; if it has the `data-l
 **Author:** Morgan Estes (@morganestes) http://github.com/morganestes
 
 **Details:** https://github.com/morganestes/h5-lightbox
-
-**TODO** Implement the modal lightbox code
