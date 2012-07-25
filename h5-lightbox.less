@@ -1,0 +1,28 @@
+.box-shadow (@x: 0, @y: 0, @blur: 1px, @color: #000) {
+    -webkit-box-shadow: @arguments;
+    -moz-box-shadow: @arguments;
+    box-shadow: @arguments;
+}
+#lightbox {
+    position: fixed; /* keeps the lightbox window in the current viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: rgba(0, 0, 0, .7);
+
+    p {
+        margin-right: 20px;
+        font-size: 12px;
+        color: #fff;
+        text-align: right;
+        cursor: pointer;
+    }
+
+    img {
+        max-width: 90%;
+        .box-shadow(0, 0, 25px, #111);
+
+    }
+}
