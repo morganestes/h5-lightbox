@@ -1,4 +1,4 @@
-/**
+/*!
  * jQuery h5-lightbox plugin 1.0
  *
  * @author Morgan Estes (@morganestes) http://github.com/morganestes
