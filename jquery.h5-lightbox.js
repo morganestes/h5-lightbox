@@ -2,7 +2,7 @@
  * jQuery h5-lightbox plugin 1.0
  *
  * @author Morgan Estes (@morganestes) http://github.com/morganestes
- * @source Lightbox code: http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/super-simple-lightbox-with-css-and-jquery/
+ * @source Lightbox code: http://bit.ly/MzTDLT
  *
  * Uses the HTML5 data- attribute to add a larger version of an image
  * then displays that image in a simple lightbox

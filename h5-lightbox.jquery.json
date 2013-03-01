@@ -1,0 +1,28 @@
+{
+  "name": "h5-lightbox",
+  "title": "jQuery HTML5 Lightbox",
+  "description": "jQuery plugin to create simple lightboxes using the HTML5 data attribute.",
+  "keywords": [
+    "lightbox",
+    "HTML5",
+    "data attribute"
+  ],
+  "version": "1.0",
+  "author": {
+    "name": "Morgan W. Estes",
+    "url": "http://morganestes.me"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://raw.github.com/morganestes/h5-lightbox/master/MIT-LICENSE.txt"
+    }
+  ],
+  "bugs": "https://github.com/morganestes/h5-lightbox/issues",
+  "homepage": "http://morganestes.me/h5-lightbox",
+  "docs": "http://morganestes.me/h5-lightbox",
+  "download": "http://morganestes.me/h5-lightbox",
+  "dependencies": {
+    "jquery": ">=1.2.3"
+  }
+}
