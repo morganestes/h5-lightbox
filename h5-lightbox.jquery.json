@@ -23,6 +23,7 @@
   "homepage": "http://morganestes.me/h5-lightbox",
   "docs": "http://morganestes.me/h5-lightbox",
   "download": "http://morganestes.me/h5-lightbox",
+  "demo": "http://morganestes.me/h5-lightbox/demo.html",
   "dependencies": {
     "jquery": ">=1.2.3"
   }
