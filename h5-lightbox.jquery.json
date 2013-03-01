@@ -5,9 +5,10 @@
   "keywords": [
     "lightbox",
     "HTML5",
-    "data attribute"
+    "data",
+    "attribute"
   ],
-  "version": "1.0",
+  "version": "1.0.0",
   "author": {
     "name": "Morgan W. Estes",
     "url": "http://morganestes.me"
