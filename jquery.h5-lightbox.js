@@ -1,5 +1,5 @@
 /*!
- * jQuery h5-lightbox plugin 1.1.1
+ * jQuery h5-lightbox plugin 1.2.0
  * http://plugins.jquery.com/h5-lightbox/
  */
  /* @author Morgan Estes (@morganestes) http://github.com/morganestes
@@ -79,9 +79,3 @@ $.fn.h5lightbox.defaults = {
 };
 
 })(jQuery);
-
-// remove the lines below if you want to call the function yourself
-// otherwise, it will automatically run on page load
-jQuery(function ($) {
-    $("img").h5lightbox();
-});
