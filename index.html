@@ -32,7 +32,7 @@
       <section>
         <div id="title">
           <h1>h5-lightbox</h1>
-          <p>A jQuery lightbox built on the HTML5 data attribute</p>
+          <p>A jQuery lightbox plugin built on HTML5.</p>
           <hr>
           <span class="credits left">Project maintained by <a href="https://github.com/morganestes">morganestes</a></span>
           <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
@@ -41,32 +41,28 @@
         <h1>
 <a name="h5-lightbox" class="anchor" href="#h5-lightbox"><span class="octicon octicon-link"></span></a>h5-lightbox</h1>
 
-<p>A jQuery lightbox built on the <a href="http://html5doctor.com/html5-custom-data-attributes/">HTML5 <code>data</code> attribute</a>.</p>
-
-<h2>
-<a name="about-the-plugin" class="anchor" href="#about-the-plugin"><span class="octicon octicon-link"></span></a>About the plugin</h2>
-
-<p>Uses the HTML5 <code>data</code> attribute to add a larger version of an image then displays that image in a simple lightbox.</p>
-
-<h3>
-<a name="author" class="anchor" href="#author"><span class="octicon octicon-link"></span></a>Author</h3>
-
-<p><a href="http://morganestes.me">Morgan Estes</a></p>
-
-<h3>
-<a name="source" class="anchor" href="#source"><span class="octicon octicon-link"></span></a>Source</h3>
-
-<p><a href="https://github.com/morganestes/h5-lightbox">https://github.com/morganestes/h5-lightbox</a></p>
+<p>A jQuery lightbox plugin built on HTML5. It uses the <a href="http://html5doctor.com/html5-custom-data-attributes/">HTML5 <code>data</code> attribute</a> to add a larger version of an image then displays that image in a simple modal lightbox.</p>
 
 <h2>
 <a name="how-to-use" class="anchor" href="#how-to-use"><span class="octicon octicon-link"></span></a>How to use</h2>
 
-<p>Add a <code>data-large-src</code> attribute to the <code>&lt;img&gt;</code> element with the url of the larger version of your image.</p>
-
-<h3>
+<ul>
+<li>Add jQuery (at least 1.7) and the plugin to your page.</li>
+<li>Add a <code>data-large-src</code> attribute to the <code>&lt;img&gt;</code> element with the url of the larger version of your image.</li>
+<li>Add the jQuery call to run the plugin on your images.</li>
+<li>Click and enjoy.</li>
+</ul><h3>
 <a name="example" class="anchor" href="#example"><span class="octicon octicon-link"></span></a>Example:</h3>
 
-<pre><code>&lt;img src="http://placekitten.com/200/300" alt="kitteh!" width="200" height="300" data-large-src="http://placekitten.com/400/600"&gt;
+<pre><code>&lt;img src="http://placekitten.com/200/300" alt="kitteh!" 
+width="200" height="300" 
+data-large-src="http://placekitten.com/400/600" /&gt;
+
+&lt;script&gt;
+jQuery(function ($) {
+    $("img").h5lightbox();
+});
+&lt;/script&gt;
 </code></pre>
 
 <p>The plugin will go through each <code>img</code> element on the page; if it has the <code>data-large-src</code> (or your own defined attribute) it will wrap that in a link that opens a modal lightbox when clicked.</p>
@@ -74,13 +70,19 @@
 <h2>
 <a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
 
-<p>Copyright (c) 2012 Morgan W. Estes (<a href="http://github.com/morganestes">http://github.com/morganestes</a>)</p>
+<p>This plugin is licensed under MIT. Have at it.</p>
 
-<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+<h3>
+<a name="author" class="anchor" href="#author"><span class="octicon octicon-link"></span></a>Author</h3>
 
-<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+<p><a href="http://morganestes.me">Morgan Estes</a></p>
 
-<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+<h3>
+<a name="grab-the-source-and-fork-it" class="anchor" href="#grab-the-source-and-fork-it"><span class="octicon octicon-link"></span></a>Grab the source and fork it</h3>
+
+<p><a href="https://github.com/morganestes/h5-lightbox">https://github.com/morganestes/h5-lightbox</a></p>
+
+<p><a href="https://bitdeli.com/free" title="Bitdeli Badge"><img src="https://d2weczhvl823v0.cloudfront.net/morganestes/h5-lightbox/trend.png" alt="Bitdeli Badge"></a></p>
       </section>
 
     </div>
