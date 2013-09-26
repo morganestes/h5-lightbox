@@ -24,7 +24,7 @@
   "bugs": "https://github.com/morganestes/h5-lightbox/issues",
   "homepage": "http://morganestes.me/h5-lightbox",
   "docs": "http://morganestes.me/h5-lightbox",
-  "download": "http://morganestes.me/h5-lightbox",
+  "download": "https://github.com/morganestes/h5-lightbox/archive/1.2.0.zip",
   "demo": "http://cdpn.io/simxa",
   "dependencies": {
     "jquery": ">=1.7"
