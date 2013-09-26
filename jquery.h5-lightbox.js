@@ -1,5 +1,5 @@
 /*!
- * jQuery h5-lightbox plugin 1.0
+ * jQuery h5-lightbox plugin 1.1.0
  *
  * @author Morgan Estes (@morganestes) http://github.com/morganestes
  * @source Lightbox code: http://bit.ly/MzTDLT
@@ -64,7 +64,7 @@
                     $('body').append(lightbox);
                 }
             });
-            $('#lightbox').live('click', function () {
+            $(document).on('click', '#lightbox', function (event) {
                 $('#lightbox').hide();
             });
         });

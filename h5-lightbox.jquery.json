@@ -8,7 +8,7 @@
     "data",
     "attribute"
   ],
-  "version": "1.0.1",
+  "version": "1.1.0",
   "author": {
     "name": "Morgan W. Estes",
     "url": "http://morganestes.me"
@@ -23,8 +23,8 @@
   "homepage": "http://morganestes.me/h5-lightbox",
   "docs": "http://morganestes.me/h5-lightbox",
   "download": "http://morganestes.me/h5-lightbox",
-  "demo": "http://morganestes.me/h5-lightbox/demo.html",
+  "demo": "http://cdpn.io/simxa",
   "dependencies": {
-    "jquery": ">=1.2.3"
+    "jquery": ">=1.7"
   }
 }

@@ -3,7 +3,6 @@ h5-lightbox
 
 A jQuery lightbox built on the [HTML5 `data` attribute](http://html5doctor.com/html5-custom-data-attributes/).
 
-
 ## About the plugin ##
 Uses the HTML5 `data` attribute to add a larger version of an image then displays that image in a simple lightbox.
 
