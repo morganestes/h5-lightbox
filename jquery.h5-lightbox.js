@@ -1,22 +1,10 @@
 /*!
- * jQuery h5-lightbox plugin 1.2.0
- * http://plugins.jquery.com/h5-lightbox/
- */
- /* @author Morgan Estes (@morganestes) http://github.com/morganestes
- * @source Lightbox code: http://bit.ly/MzTDLT
+ * h5-lightbox jQuery plugin
  *
- * Uses the HTML5 data- attribute to add a larger version of an image
- * then displays that image in a simple lightbox
- *
- * How to use: add a data- attribute to the <img> element
- * with the url of the larger version of your image.
- *
- * Example: <img src="http://placekitten.com/200/300" alt="kitteh!"
- *  width="200" height="300" data-large-src="http://placekitten.com/400/600">
- * The plugin will go through each img element on the page;
- * if it has the data-large-src (or your own defined attribute) it will
- * wrap that in an <a href> element that will open a modal lightbox
- * when clicked.
+ * @author Morgan Estes (@morganestes) http://github.com/morganestes
+ * @link http://plugins.jquery.com/h5-lightbox/
+ * @uses Lightbox code: http://bit.ly/MzTDLT
+ * @version 1.2.1
  */
 (function( $ ) {
 $.fn.h5lightbox = function( options ) {
