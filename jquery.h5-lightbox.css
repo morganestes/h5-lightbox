@@ -1,3 +1,13 @@
+.wrapper {
+  width: 80%;
+  background: #ccc;
+}
+
+.wrapper figure {
+  float: left;
+  margin: 2em;
+}
+
 #lightbox {
   position: fixed;
   /* keeps the lightbox window in the current viewport */
