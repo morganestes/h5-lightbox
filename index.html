@@ -1,69 +1,78 @@
 <!doctype html>
-<!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
-<!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on http://github.com/jonrohan -->
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>h5-lightbox by morganestes</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-  <link rel="stylesheet" href="stylesheets/stylesheet.css" media="screen"/>
-  <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script type="text/javascript" src="javascripts/script.js"></script>
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/morganestes/h5-lightbox">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/morganestes/h5-lightbox/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/morganestes/h5-lightbox/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
 
-  <title>h5-lightbox</title>
-  <meta name="description" content="A jQuery lightbox built on the HTML5 data attribute">
+    <div class="wrapper">
 
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-
-</head>
-
-<body>
-
-  <div class="wrapper">
-    <header>
-      <h1 class="title">h5-lightbox</h1>
-    </header>
-    <div id="container">
-      <p class="tagline">A jQuery lightbox built on the HTML5 data attribute</p>
-      <div id="main" role="main">
-        <div class="download-bar">
-        <div class="inner">
-          <a href="https://github.com/morganestes/h5-lightbox/tarball/master" class="download-button tar"><span>Download</span></a>
-          <a href="https://github.com/morganestes/h5-lightbox/zipball/master" class="download-button zip"><span>Download</span></a>
-          <a href="https://github.com/morganestes/h5-lightbox" class="code">View h5-lightbox on GitHub</a>
-        </div>
-        <span class="blc"></span><span class="trc"></span>
-        </div>
-        <article class="markdown-body">
+      <section>
+        <div id="title">
           <h1>h5-lightbox</h1>
+          <p>A jQuery lightbox built on the HTML5 data attribute</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/morganestes">morganestes</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h1>
+<a name="h5-lightbox" class="anchor" href="#h5-lightbox"><span class="octicon octicon-link"></span></a>h5-lightbox</h1>
 
 <p>A jQuery lightbox built on the <a href="http://html5doctor.com/html5-custom-data-attributes/">HTML5 <code>data</code> attribute</a>.</p>
 
-<h2>About the plugin</h2>
+<h2>
+<a name="about-the-plugin" class="anchor" href="#about-the-plugin"><span class="octicon octicon-link"></span></a>About the plugin</h2>
 
 <p>Uses the HTML5 <code>data</code> attribute to add a larger version of an image then displays that image in a simple lightbox.</p>
 
-<h3>Author</h3>
+<h3>
+<a name="author" class="anchor" href="#author"><span class="octicon octicon-link"></span></a>Author</h3>
 
 <p><a href="http://morganestes.me">Morgan Estes</a></p>
 
-<h3>Source</h3>
+<h3>
+<a name="source" class="anchor" href="#source"><span class="octicon octicon-link"></span></a>Source</h3>
 
 <p><a href="https://github.com/morganestes/h5-lightbox">https://github.com/morganestes/h5-lightbox</a></p>
 
-<h2>How to use</h2>
+<h2>
+<a name="how-to-use" class="anchor" href="#how-to-use"><span class="octicon octicon-link"></span></a>How to use</h2>
 
 <p>Add a <code>data-large-src</code> attribute to the <code>&lt;img&gt;</code> element with the url of the larger version of your image.</p>
 
-<h3>Example:</h3>
+<h3>
+<a name="example" class="anchor" href="#example"><span class="octicon octicon-link"></span></a>Example:</h3>
 
 <pre><code>&lt;img src="http://placekitten.com/200/300" alt="kitteh!" width="200" height="300" data-large-src="http://placekitten.com/400/600"&gt;
 </code></pre>
 
 <p>The plugin will go through each <code>img</code> element on the page; if it has the <code>data-large-src</code> (or your own defined attribute) it will wrap that in a link that opens a modal lightbox when clicked.</p>
 
-<h2>License</h2>
+<h2>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
 
 <p>Copyright (c) 2012 Morgan W. Estes (<a href="http://github.com/morganestes">http://github.com/morganestes</a>)</p>
 
@@ -72,27 +81,11 @@
 <p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
 
 <p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
-        </article>
-      </div>
+      </section>
+
     </div>
-    <footer>
-      <div class="owner">
-      <p><a href="https://github.com/morganestes" class="avatar"><img src="https://secure.gravatar.com/avatar/bf93a52d29dd4a57b6649d9e9f8ec0d9?s=30&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png" width="48" height="48"/></a> <a href="https://github.com/morganestes">morganestes</a> maintains <a href="https://github.com/morganestes/h5-lightbox">h5-lightbox</a></p>
-
-
-      </div>
-      <div class="creds">
-        <small>This page generated using <a href="https://pages.github.com/">GitHub Pages</a><br/>theme by <a href="http://twitter.com/jonrohan/">Jon Rohan</a></small>
-      </div>
-    </footer>
-  </div>
-  <div class="current-section">
-    <a href="#top">Scroll to top</a>
-    <a href="https://github.com/morganestes/h5-lightbox/tarball/master" class="tar">tar</a><a href="https://github.com/morganestes/h5-lightbox/zipball/master" class="zip">zip</a><a href="" class="code">source code</a>
-    <p class="name"></p>
-  </div>
-
-            <script type="text/javascript">
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+              <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
           </script>
@@ -103,5 +96,5 @@
             } catch(err) {}
           </script>
 
-</body>
+  </body>
 </html>
