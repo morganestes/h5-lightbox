@@ -1,5 +1,5 @@
 /*!
- * jQuery h5-lightbox plugin 1.2.0
+ * jQuery h5-lightbox plugin 1.1.1
  * http://plugins.jquery.com/h5-lightbox/
  */
  /* @author Morgan Estes (@morganestes) http://github.com/morganestes
