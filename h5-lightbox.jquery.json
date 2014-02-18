@@ -9,7 +9,7 @@
     "data",
     "attribute"
   ],
-  "version": "1.2.1",
+  "version": "1.2.2",
   "author": {
     "name": "Morgan W. Estes",
     "email": "morgan.estes@gmail.com",
@@ -18,13 +18,12 @@
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://raw.github.com/morganestes/h5-lightbox/master/license.txt"
+      "url": "http://mestes.mit-license.org/2013"
     }
   ],
   "bugs": "https://github.com/morganestes/h5-lightbox/issues",
   "homepage": "http://morganestes.me/h5-lightbox",
   "docs": "http://morganestes.me/h5-lightbox",
-  "download": "https://github.com/morganestes/h5-lightbox/archive/1.2.0.zip",
   "demo": "http://cdpn.io/simxa",
   "dependencies": {
     "jquery": ">=1.7"

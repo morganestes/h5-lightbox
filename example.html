@@ -11,6 +11,16 @@
 	<p>View full code+sample at <a href="http://codepen.io/morganestes/pen/simxa">http://codepen.io/morganestes/pen/simxa</a></p>
 	<div class="wrapper">
 <figure>
+    <img src="http://lorempixel.com/400/200" alt="aww, a kitten!" width="400" height="200"
+         data-large-src="http://lorempixel.com/640/480">
+    <figcaption><p>Image with <code>data-large-src</code></p></figcaption>
+</figure>
+<figure>
+    <img src="http://placekitten.com/200/300" alt="aww, a kitten!" width="200" height="300"
+         data-large-src="http://placekitten.com/400/600">
+    <figcaption><p>Image with <code>data-large-src</code></p></figcaption>
+</figure>
+<figure>
     <img src="http://placekitten.com/200/300" alt="aww, a kitten!" width="200" height="300"
          data-large-src="http://placekitten.com/400/600">
     <figcaption><p>Image with <code>data-large-src</code></p></figcaption>
@@ -23,5 +33,10 @@
 </div>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
 <script src="jquery.h5-lightbox.js"></script>
+<script>
+    $(function(){
+        $("img").h5lightbox();
+    });
+</script>
 </body>
 </html>
