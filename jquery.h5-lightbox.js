@@ -1,10 +1,13 @@
 /*!
  * h5-lightbox jQuery plugin
  *
+ * @version 1.2.2
  * @author Morgan Estes (@morganestes) http://github.com/morganestes
  * @link http://plugins.jquery.com/h5-lightbox/
  * @uses Lightbox code: http://bit.ly/MzTDLT
- * @version 1.2.1
+ *
+ * Copyright (c) 2013-2014 Morgan Estes
+ * @license Licensed under the MIT license.
  */
 (function( $ ) {
 $.fn.h5lightbox = function( options ) {
@@ -39,7 +42,7 @@ $.fn.h5lightbox = function( options ) {
             lbImageHref = $( this ).attr( "href" );
 
             if ( $( "#lightbox" ).length ) {
-                $( "#lb_img" ).html( "<img src='" + lbImageHref + "' />" );
+                $( "#lightbox-img" ).html( "<img src='" + lbImageHref + "' />" );
                 $( "#lightbox" ).show();
             } else {
                 lightbox =
@@ -55,7 +58,7 @@ $.fn.h5lightbox = function( options ) {
         });
 
         $( document ).on( "click", "#lightbox", function() {
-            $( "#lightbox" ).hide();
+            $( this ).hide();
         });
     });
 };
