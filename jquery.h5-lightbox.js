@@ -22,6 +22,7 @@ $.fn.h5lightbox = function( options ) {
 
         var $this = $( this ),
             imgLarge = $this.attr( opt.target ),
+                altText = $this.attr("alt"),
             /**
              * check if the image has the proper data attribute
              * @param {String} img_large Attribute set in options.
@@ -32,7 +33,7 @@ $.fn.h5lightbox = function( options ) {
             };
 
         if ( isLightbox( imgLarge ) ) {
-            $this.wrap( "<a class='" + opt.wrapperClass + "' href='" + imgLarge + "'></a>" );
+                $this.wrap("<a class='" + opt.wrapperClass + "' href='" + imgLarge + "'" + "' alt='" + altText + "'></a>");
         }
 
         // lightbox implementation
@@ -40,16 +41,17 @@ $.fn.h5lightbox = function( options ) {
             e.preventDefault();
             var lightbox,
             lbImageHref = $( this ).attr( "href" );
+                    lbImageAlt = $(this).attr("alt");
 
             if ( $( "#lightbox" ).length ) {
-                $( "#lightbox-img" ).html( "<img src='" + lbImageHref + "' />" );
+                    $("#lightbox-img").html("<img src='" + lbImageHref + "'' alt='" + lbImageAlt + "' />");
                 $( "#lightbox" ).show();
             } else {
                 lightbox =
                     "<div id='lightbox'>" +
                         "<p>Click to close</p>" +
                         "<div id='lightbox-img'>" +
-                            "<img src='" + lbImageHref + "' />" +
+                        "<img src='" + lbImageHref + "'' alt='" + lbImageAlt + "' />" +
                         "</div>" +
                     "</div>";
 
