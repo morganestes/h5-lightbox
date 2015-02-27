@@ -23,6 +23,7 @@ $.fn.h5lightbox = function( options ) {
         var $this = $( this ),
             imgLarge = $this.attr( opt.target ),
                 altText = $this.attr("alt"),
+                page = location.href,
             /**
              * check if the image has the proper data attribute
              * @param {String} img_large Attribute set in options.
@@ -33,26 +34,33 @@ $.fn.h5lightbox = function( options ) {
             };
 
         if ( isLightbox( imgLarge ) ) {
-                $this.wrap("<a class='" + opt.wrapperClass + "' href='" + imgLarge + "'" + "' alt='" + altText + "'></a>");
+                $this.wrap("<a class='" + opt.wrapperClass + "' href='" + imgLarge + "'" + "' title='" + altText + "' data-page='" + page + "'></a>");
         }
 
         // lightbox implementation
         $( "a." + opt.wrapperClass ).click(function( e ) {
             e.preventDefault();
-            var lightbox,
-            lbImageHref = $( this ).attr( "href" );
-                    lbImageAlt = $(this).attr("alt");
+                    var lbImageHref = $(this).attr("href"),
+                    lbImageAlt = $(this).attr("title"),
+                    lbPage = $(this).attr("data-page");
 
             if ( $( "#lightbox" ).length ) {
-                    $("#lightbox-img").html("<img src='" + lbImageHref + "'' alt='" + lbImageAlt + "' />");
+                    $("#lightbox-img").html("<img class='large' src='" + lbImageHref + "'' alt='" + lbImageAlt + "' />");
                 $( "#lightbox" ).show();
             } else {
-                lightbox =
+                    var lightbox =
                     "<div id='lightbox'>" +
-                        "<p>Click to close</p>" +
+                        "<p>Click anywhere to close</p>" +
                         "<div id='lightbox-img'>" +
-                        "<img src='" + lbImageHref + "'' alt='" + lbImageAlt + "' />" +
+                        "<img class='large' src='" + lbImageHref + "'' alt='" + lbImageAlt + "' />" +
                         "</div>" +
+                        "<a href='https://www.pinterest.com/pin/create/button/?url=" + encodeURIComponent(lbPage) + "&media=" + encodeURIComponent(location.protocol + "//" + location.hostname + "/" + lbImageHref) + "&description=" + encodeURIComponent(lbImageAlt) + "'" +
+                        "data-pin-do='buttonPin'" +
+                        "data-pin-config='above'" +
+                        " target='_blank'" +
+                        "'>" +
+                        "<img class='social' src='//assets.pinterest.com/images/pidgets/pin_it_button.png' />" +
+                        "</a>" +
                     "</div>";
 
                 $( "body" ).append( lightbox );
