@@ -30,6 +30,7 @@
 
 #lightbox img {
   max-width: 90%;
+  max-height: 80vh;
   -webkit-box-shadow: 0 0 25px #111111;
      -moz-box-shadow: 0 0 25px #111111;
           box-shadow: 0 0 25px #111111;
