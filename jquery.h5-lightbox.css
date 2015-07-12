@@ -23,6 +23,20 @@
   text-align: right;
   cursor: pointer;
 }
+#lightbox figure.loading {
+  visibility: hidden;
+}
+#lightbox figure.loading::before {
+  content: "";
+  display: block;
+  visibility: visible;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: url(spinner.gif ) no-repeat center center;
+}
 #lightbox figure img {
   max-width: 90%;
   -webkit-box-shadow: 0 0 25px #111111;

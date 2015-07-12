@@ -44,22 +44,24 @@ $.fn.h5lightbox = function( options ) {
             lbImageHref = $( this ).attr( "href" );
             lbImageCaption = $( this ).attr( "title" );
 
-            if ( $( "#lightbox" ).length ) {
-                $( "#lightbox figure img" ).attr( "src", lbImageHref );
-                $( "#lightbox figure img" ).text( lbImageCaption );
-                $( "#lightbox" ).show();
-            } else {
+            if ( $( "#lightbox" ).length == 0 ) {
                 lightbox =
                     "<div id='lightbox'>" +
-                        "<p>Click to close</p>" +
-                        "<figure>" +
-                            "<img src='" + lbImageHref + "' />" +
-                            "<figcaption>" + lbImageCaption + "</figcaption>"
+                        ( opt.showClose ? "<p>Click to close</p>" : "" ) +
+                        "<figure class='loading'>" +
+                            "<img />" +
+                            ( opt.showCaptions ? "<figcaption>" + lbImageCaption + "</figcaption>" : "" ) +
                         "</figure>" +
                     "</div>";
 
                 $( "body" ).append( lightbox );
             }
+
+            $( "#lightbox figure img" )
+                .load(function() { $(this).parent().removeClass("loading") })
+                .attr( "src", lbImageHref );
+            $( "#lightbox figure figcaption" ).text( lbImageCaption );
+            $( "#lightbox" ).show();
         });
 
         $( document ).on( "click", "#lightbox", function() {
@@ -72,6 +74,8 @@ $.fn.h5lightbox = function( options ) {
 $.fn.h5lightbox.defaults = {
     target: "data-large-src",
     targetCaption: "alt",
+    showCaptions: true,
+    showClose: true,
     wrapperClass: "lightbox"
 };
 
