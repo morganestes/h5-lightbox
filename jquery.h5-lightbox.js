@@ -13,6 +13,7 @@
 $.fn.h5lightbox = function( options ) {
 
     if( !this.length ) {
+        console.warn("h5 Lightbox: No objects were selected");
         return this;
     }
 
