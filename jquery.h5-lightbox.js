@@ -23,6 +23,7 @@ $.fn.h5lightbox = function( options ) {
 
         var $this = $( this ),
             imgLarge = $this.attr( opt.target ),
+            imgCaption = $this.attr( opt.targetCaption );
             /**
              * check if the image has the proper data attribute
              * @param {String} img_large Attribute set in options.
@@ -33,7 +34,7 @@ $.fn.h5lightbox = function( options ) {
             };
 
         if ( isLightbox( imgLarge ) ) {
-            $this.wrap( "<a class='" + opt.wrapperClass + "' href='" + imgLarge + "'></a>" );
+            $this.wrap( "<a class='" + opt.wrapperClass + "' href='" + imgLarge + "' title='" + imgCaption + "'></a>" );
         }
 
         // lightbox implementation
@@ -41,17 +42,20 @@ $.fn.h5lightbox = function( options ) {
             e.preventDefault();
             var lightbox,
             lbImageHref = $( this ).attr( "href" );
+            lbImageCaption = $( this ).attr( "title" );
 
             if ( $( "#lightbox" ).length ) {
-                $( "#lightbox-img" ).html( "<img src='" + lbImageHref + "' />" );
+                $( "#lightbox figure img" ).attr( "src", lbImageHref );
+                $( "#lightbox figure img" ).text( lbImageCaption );
                 $( "#lightbox" ).show();
             } else {
                 lightbox =
                     "<div id='lightbox'>" +
                         "<p>Click to close</p>" +
-                        "<div id='lightbox-img'>" +
+                        "<figure>" +
                             "<img src='" + lbImageHref + "' />" +
-                        "</div>" +
+                            "<figcaption>" + lbImageCaption + "</figcaption>"
+                        "</figure>" +
                     "</div>";
 
                 $( "body" ).append( lightbox );
@@ -67,6 +71,7 @@ $.fn.h5lightbox = function( options ) {
 // default options
 $.fn.h5lightbox.defaults = {
     target: "data-large-src",
+    targetCaption: "alt",
     wrapperClass: "lightbox"
 };
 
