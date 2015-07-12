@@ -9,6 +9,7 @@
  * Copyright (c) 2013-2014 Morgan Estes
  * @license Licensed under the MIT license.
  */
+
 (function( $ ) {
 $.fn.h5lightbox = function( options ) {
 
@@ -48,8 +49,7 @@ $.fn.h5lightbox = function( options ) {
                 lightbox =
                     "<div id='lightbox'>" +
                         ( opt.showClose ? "<p>Click to close</p>" : "" ) +
-                        "<figure class='loading'>" +
-                            "<img />" +
+                        "<figure>" +
                             ( opt.showCaptions ? "<figcaption>" + lbImageCaption + "</figcaption>" : "" ) +
                         "</figure>" +
                     "</div>";
@@ -57,8 +57,18 @@ $.fn.h5lightbox = function( options ) {
                 $( "body" ).append( lightbox );
             }
 
+            if ( opt.showPreloader ) {
+                $("#lightbox figure").addClass("loading");
+            }
+
+            $( "#lightbox figure img" ).remove();
+            $( "#lightbox figure" ).prepend("<img />");
             $( "#lightbox figure img" )
-                .load(function() { $(this).parent().removeClass("loading") })
+                .load(function() {
+                    if ( opt.showPreloader ) {
+                        $(this).parent().removeClass("loading")
+                    }
+                })
                 .attr( "src", lbImageHref );
             $( "#lightbox figure figcaption" ).text( lbImageCaption );
             $( "#lightbox" ).show();
@@ -74,9 +84,10 @@ $.fn.h5lightbox = function( options ) {
 $.fn.h5lightbox.defaults = {
     target: "data-large-src",
     targetCaption: "alt",
+    wrapperClass: "lightbox",
     showCaptions: true,
     showClose: true,
-    wrapperClass: "lightbox"
+    showPreloader: true
 };
 
 })(jQuery);
