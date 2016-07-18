@@ -1,0 +1,7 @@
+name: morganestes/h5-lightbox
+author:
+  name: Morgan Estes
+  email: morgan.estes@gmail.com
+  url: 'https://morganestes.com'
+copyright: 2015 Morgan Estes
+description: A jQuery lightbox built on the HTML5 data attribute
