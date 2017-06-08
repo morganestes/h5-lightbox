@@ -9,10 +9,12 @@
  * Copyright (c) 2013-2014 Morgan Estes
  * @license Licensed under the MIT license.
  */
+
 (function( $ ) {
 $.fn.h5lightbox = function( options ) {
 
     if( !this.length ) {
+        console.warn("h5 Lightbox: No objects were selected");
         return this;
     }
 
@@ -22,6 +24,7 @@ $.fn.h5lightbox = function( options ) {
 
         var $this = $( this ),
             imgLarge = $this.attr( opt.target ),
+            imgCaption = $this.attr( opt.targetCaption );
             /**
              * check if the image has the proper data attribute
              * @param {String} img_large Attribute set in options.
@@ -32,7 +35,7 @@ $.fn.h5lightbox = function( options ) {
             };
 
         if ( isLightbox( imgLarge ) ) {
-            $this.wrap( "<a class='" + opt.wrapperClass + "' href='" + imgLarge + "'></a>" );
+            $this.wrap( "<a class='" + opt.wrapperClass + "' href='" + imgLarge + "' title='" + imgCaption + "'></a>" );
         }
 
         // lightbox implementation
@@ -40,21 +43,35 @@ $.fn.h5lightbox = function( options ) {
             e.preventDefault();
             var lightbox,
             lbImageHref = $( this ).attr( "href" );
+            lbImageCaption = $( this ).attr( "title" );
 
-            if ( $( "#lightbox" ).length ) {
-                $( "#lightbox-img" ).html( "<img src='" + lbImageHref + "' />" );
-                $( "#lightbox" ).show();
-            } else {
+            if ( $( "#lightbox" ).length == 0 ) {
                 lightbox =
                     "<div id='lightbox'>" +
-                        "<p>Click to close</p>" +
-                        "<div id='lightbox-img'>" +
-                            "<img src='" + lbImageHref + "' />" +
-                        "</div>" +
+                        ( opt.showClose ? "<p>Click to close</p>" : "" ) +
+                        "<figure>" +
+                            ( opt.showCaptions ? "<figcaption>" + lbImageCaption + "</figcaption>" : "" ) +
+                        "</figure>" +
                     "</div>";
 
                 $( "body" ).append( lightbox );
             }
+
+            if ( opt.showPreloader ) {
+                $("#lightbox figure").addClass("loading");
+            }
+
+            $( "#lightbox figure img" ).remove();
+            $( "#lightbox figure" ).prepend("<img />");
+            $( "#lightbox figure img" )
+                .load(function() {
+                    if ( opt.showPreloader ) {
+                        $(this).parent().removeClass("loading")
+                    }
+                })
+                .attr( "src", lbImageHref );
+            $( "#lightbox figure figcaption" ).text( lbImageCaption );
+            $( "#lightbox" ).show();
         });
 
         $( document ).on( "click", "#lightbox", function() {
@@ -66,7 +83,11 @@ $.fn.h5lightbox = function( options ) {
 // default options
 $.fn.h5lightbox.defaults = {
     target: "data-large-src",
-    wrapperClass: "lightbox"
+    targetCaption: "alt",
+    wrapperClass: "lightbox",
+    showCaptions: true,
+    showClose: true,
+    showPreloader: true
 };
 
 })(jQuery);
