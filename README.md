@@ -1,4 +1,4 @@
-![No Maintenance Intended](http://unmaintained.tech/badge.svg)
+[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
 
 Simple HTML5 lightbox
 ===========
