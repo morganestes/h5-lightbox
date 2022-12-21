@@ -36,4 +36,4 @@ This plugin is licensed under MIT. Have at it.
 [https://github.com/morganestes/h5-lightbox](https://github.com/morganestes/h5-lightbox)
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/morganestes/h5-lightbox/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
+[![No Maintenance Intended](http://unmaintained.tech/badge.svg
