@@ -1,4 +1,6 @@
-h5-lightbox
+![No Maintenance Intended](http://unmaintained.tech/badge.svg)
+
+Simple HTML5 lightbox
 ===========
 
 A jQuery lightbox plugin built on HTML5. It uses the [HTML5 `data` attribute](http://html5doctor.com/html5-custom-data-attributes/) to add a larger version of an image then displays that image in a simple modal lightbox.
@@ -34,6 +36,3 @@ This plugin is licensed under MIT. Have at it.
 
 ### Grab the source and fork it ###
 [https://github.com/morganestes/h5-lightbox](https://github.com/morganestes/h5-lightbox)
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/morganestes/h5-lightbox/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-[![No Maintenance Intended](http://unmaintained.tech/badge.svg
